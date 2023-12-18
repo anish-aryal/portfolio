@@ -1,8 +1,9 @@
 import './App.css';
-
+import PortfolioNav from './Components/Nav';
 function App() {
   return (
     <div className="App">
+      <PortfolioNav/>
       <header className="App-header">
       <h6>This is a empty page</h6>
         <p>
