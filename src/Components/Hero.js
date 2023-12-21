@@ -1,32 +1,37 @@
 import "./home.css";
-const skills=[
+import profile from "../Assets/profile.jpg";
 
-    "React.js",
-    "Node.js",
-    "MongoDB",
-    "Express.js",
-    "REST API",
-    "Redux",
-    "Webflow",
-    "Sass",
-    "Git",
-    "GitHub",
-    "JavaScript",
-    "HTML",
-    "CSS",
-    "Bootstrap",
-    "UI/UX",
-    "Figma",
-    "Problem Solving",
-    "Teamwork & Collaboration",
-    "Communication",
-    "Design Thinking",
+const skills = [
+  "React.js",
+  "Node.js",
+  "MongoDB",
+  "Express.js",
+  "REST API",
+  "Redux",
+  "Webflow",
+  "Sass",
+  "Git",
+  "GitHub",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "Bootstrap",
+  "UI/UX",
+  "Figma",
+  "Problem Solving",
+  "Teamwork & Collaboration",
+  "Communication",
+  "Design Thinking",
+];
+const profileImg = {
+  width: '100px',
+  height: '100px',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundImage: `url(${profile})`,
+};
 
-
-
-
-
-]
 export default function Hero() {
   return (
     <div className="container">
@@ -36,13 +41,15 @@ export default function Hero() {
             <div className="hero-text  col-12 gy-5">
               <div className="row gy-3">
                 <div className="col-12 mb-2">
-                    <div style={{width:'80px', height:'80px', backgroundImage:`url('https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=2831&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`, backgroundRepeat:'no-repeat', backgroundPosition:'center', backgroundSize:'cover' }} className="bg-light rounded-circle"></div>
+                  <div className="rounded-circle" style={profileImg}></div>
                 </div>
                 <div className="col-12">
-                  <h1 className="hero-title text-light">Front-end Developer & Designer</h1>
+                  <h1 className="hero-title text-light">
+                    Front-end Developer & Designer
+                  </h1>
                 </div>
                 <div className="col-12 d-flex gap-3">
-                  <button href="#" className="btn btn-success rounded-5 px-3 ">
+                  <button href="#" className="btn btn-success rounded-5 px-3">
                     Open for Work
                   </button>
                   <button
@@ -59,13 +66,16 @@ export default function Hero() {
             </div>
 
             <div className="col-12">
-
-                <div className="d-flex flex-wrap gap-3">
-                    {skills.map((skill)=>(
-                        <div className="skill-tag px-3 py-1 d-flex align-items-center">{skill}</div>
-                    ))}
-
-                </div>
+              <div className="d-flex flex-wrap gap-3">
+                {skills.map((skill, index) => (
+                  <div
+                    key={index}
+                    className="skill-tag px-3 py-1 d-flex align-items-center"
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
